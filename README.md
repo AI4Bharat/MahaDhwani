@@ -6,7 +6,7 @@ MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian langu
 ## Download 
 
 #### Our Dataflow Pipeline works as follows-
-1. Video_ids are fetched from a postgreSQL table which contains all the video_ids.
+1. Video_ids are fetched from a postgreSQL table which contains all the video_ids, metadata and related info.
 2. Video_ids are assigned to each VM through dataflow.
 3. Audios are downloaded on each VM using yt-dlp and then uploaded to a cloud bucket.
 4. After successful upload, the PostgreSQL table is updated with the metadata, bucket_path, duration, file size, etc.
