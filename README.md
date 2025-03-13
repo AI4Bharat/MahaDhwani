@@ -21,6 +21,9 @@ MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian langu
 bash run.sh
 ```
 
+## Model
+Huggingface - [Model](https://huggingface.co/ai4bharat/MahaDhwani_pretrained_conformer)
+
 ## Analysis
 ### 1. Effect of Pretraining -
 We compare the performance of ASR models fine-tuned on the IndicVoices dataset, starting with (i) random initialisation (ii) pretrained checkpoint of an English ASR model, Nvidia-En-SSL (iii) the IndicConformer-HMS model pretrained on MahaDhwani. Each of the above is trained 12.5%, 50% and 100% of the labeled training data.
