@@ -12,7 +12,7 @@ MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian langu
 4. After successful upload, the PostgreSQL table is updated with the metadata, bucket_path, duration, file size, etc.
 
 #### Steps to run the pipeline -
-1. Setup PostgreSqL table, cloud bucket and update the code in ```pipeline.py``` accordingly.
+1. Setup a PostgreSqL table, a cloud bucket and update the code in ```pipeline.py``` accordingly.
 2. Setup a GCP account for dataflow access.
 3. Create and push the ```Dockerfile``` for setting up VM environments(dockerfile provided).
       - Make sure that the apache beam version in the dockerfile matches with the local environment(Python 3.10 and Apache beam sdk 2.58.1 were used here)
