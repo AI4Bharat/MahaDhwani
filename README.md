@@ -22,7 +22,9 @@ bash run.sh
 ```
 
 ## Model
-Huggingface - [Model](https://huggingface.co/ai4bharat/MahaDhwani_pretrained_conformer)
+| Model | Link |
+|----------|----------|
+| MahaDhwani Pretrained Conformer Encoder  | [HF](https://huggingface.co/ai4bharat/MahaDhwani_pretrained_conformer)  |
 
 ## Analysis
 ### 1. Effect of Pretraining -
