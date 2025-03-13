@@ -6,7 +6,7 @@ MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian langu
 ## Download 
 EDIT
 
-Use [Dataflow pipeline](https://github.com/AI4Bharat/MahaDhwani/tree/master/dataflow_pipeline) to download audios from youtube.
+For download instructions, visit [this](https://github.com/AI4Bharat/MahaDhwani/tree/master/dataflow_pipeline) page.
 
 ## Eval
 ### 1. Effect of Pretraining -
