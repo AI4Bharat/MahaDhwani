@@ -1,12 +1,22 @@
 # MahaDhwani
-MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian languages. We propose a framework to create large raw audio datasets for under-represented languages by collating publicly accessible audio content.
+MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian languages and English. We propose a framework to create large raw audio datasets for under-represented languages by collating publicly accessible audio content.
 
 <img width="400" alt="MahaDhwani stats" src="https://github.com/AI4Bharat/MahaDhwani/blob/master/stats/mahadhwani%20stats.png" />
 
 ## Download 
-EDIT
 
-For download instructions, visit [this](https://github.com/AI4Bharat/MahaDhwani/tree/master/dataflow_pipeline) page.
+#### Our Dataflow Pipeline works as follows-
+1. Video_ids are fetched from a postgreSQL table which contains all the video_ids.
+2. Video_ids are assigned to each VM through dataflow.
+3. Audios are downloaded on each VM using yt-dlp and then uploaded to a cloud bucket.
+4. After successful upload, the PostgreSQL table is updated with the metadata, bucket_path, duration, file size, etc.
+
+#### Steps to run the pipeline -
+1. Setup PostgreSqL table, cloud bucket and update the code in ```pipeline.py``` accordingly.
+2. Setup a GCP account for dataflow access.
+3. Create and push the ```Dockerfile``` for setting up VM environments(dockerfile provided).
+      - Make sure that the apache beam version in the dockerfile matches with the local environment(Python 3.10 and Apache beam sdk 2.58.1 were used here)
+4. Run the bash script - ```run.sh```
 
 ## Eval
 ### 1. Effect of Pretraining -
