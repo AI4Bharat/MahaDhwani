@@ -18,7 +18,7 @@ MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian langu
       - Make sure that the apache beam version in the dockerfile matches with the local environment(Python 3.10 and Apache beam sdk 2.58.1 were used here)
 4. Run the bash script - ```run.sh```
 
-## Eval
+## Analysis
 ### 1. Effect of Pretraining -
 In Figure 3, we compare the performance of 9 ASR models fine-tuned on the IndicVoices dataset, starting with (i) random initialisation (ii) pretrained checkpoint of an English ASR model, Nvidia-En-SSL (iii) the IndicConformer-HMS model pretrained on MahaDhwani. Each of the above is trained 12.5%, 50% and 100% of the labeled training data.
 
