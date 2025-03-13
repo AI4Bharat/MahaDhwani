@@ -8,15 +8,18 @@ MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian langu
 #### Our Dataflow Pipeline works as follows-
 1. Video_ids are fetched from a postgreSQL table which contains all the video_ids, metadata and related info.
 2. Video_ids are assigned to each VM through dataflow.
-3. Audios are downloaded on each VM using yt-dlp and then uploaded to a cloud bucket.
+3. Audios are downloaded on each VM using yt-dlp and then uploaded to the cloud bucket.
 4. After successful upload, the PostgreSQL table is updated with the metadata, bucket_path, duration, file size, etc.
 
 #### Steps to run the pipeline -
 1. Setup a PostgreSqL table, a cloud bucket and update the code in ```pipeline.py``` accordingly.
 2. Setup a GCP account for dataflow access.
-3. Create and push the ```Dockerfile``` for setting up VM environments(dockerfile provided).
+3. Create and push the ```Dockerfile``` provided for setting up VM environments.
       - Make sure that the apache beam version in the dockerfile matches with the local environment(Python 3.10 and Apache beam sdk 2.58.1 were used here)
-4. Run the bash script - ```run.sh```
+4. Run the bash script - 
+```
+bash run.sh
+```
 
 ## Analysis
 ### 1. Effect of Pretraining -
