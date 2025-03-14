@@ -15,11 +15,12 @@ MahaDhwani is a corpus comprising 279K hours of raw audio across 22 Indian langu
 1. Setup a PostgreSqL table, a cloud bucket and update the code in ```pipeline.py``` accordingly.
 2. Setup a GCP account for dataflow access.
 3. Create and push the ```Dockerfile``` provided for setting up VM environments.
-      - Make sure that the apache beam version in the dockerfile matches with the local environment(Python 3.10 and Apache beam sdk 2.58.1 were used here)
+      - Make sure that the apache beam version in the dockerfile matches with the local environment(Python 3.10 and Apache beam sdk 2.58.1 were used here).
 4. Run the bash script - 
 ```
 bash run.sh
 ```
+5. For filtering video_ids based on metadata, ```dataflow_pipeline/languages/*/video_ids_*.csv``` files can be used.
 
 ## Model
 | Model | Link |
